@@ -30,7 +30,7 @@ function obtenerRegistros(){
 document.getElementById("form-registro").addEventListener("submit", function(e){
     e.preventDefault();
 
-    const datos = obtenerRegistro();
+    const datos = obtenerRegistros();
     if (datos === null) {
         return; 
     }
