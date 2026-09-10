@@ -1,0 +1,313 @@
+.contenedor-banner {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.caluga-banner {
+    width: 750px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 30px;
+    overflow: hidden;
+}
+
+.info-banner {
+    flex: 1;
+}
+
+.info-banner h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+.info-banner p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+.imagen-banner {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.imagen-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    display: block;
+    background-color: white;
+}
+
+.contenedor-carta-catalogo{
+    display: grid;
+    grid-template-columns: repeat(4, 220px);
+    gap: 50px;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.contenedor-inicio {
+    grid-template-columns: repeat(3, 220px);
+}
+
+.caluga-carta-catalogo{
+    width: 200px;
+    height: 280px;
+    border: #000 solid;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.caluga-carta-catalogo img {
+    width: 100%;
+    height: 100%; 
+    object-fit: contain;  
+    display: block;
+}
+
+.video-proyecto {
+    width: 770px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    display: block;
+}
+
+
+.contenedor_carta{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    padding-top:100px ;
+    margin-bottom: 100px;
+    
+}
+
+.caluga_carta{
+
+    width: 500px;
+    height: auto;
+    border: #000 solid;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #fff;
+
+}
+
+.caluga_carta img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    display: block;
+}
+
+.caluga_carta_info{
+
+    width: 700px;
+    height: auto;
+    border: #000 solid;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    background-color: #fff;
+
+}
+
+.info-carta h3 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #000;
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+.info-carta p {
+    color: #000;
+    font-size: 20px;
+}
+
+.contenedor-info{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    padding-top:100px ;
+    margin-bottom: 100px;
+    
+}
+
+.caluga-info{
+
+    width: 700px;
+    height: auto;
+    border: #000 solid;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    background-color: #fff;
+
+}
+
+.contenedor-info {
+    flex-wrap: nowrap;
+}
+
+.caluga-video {
+    width: 260px;
+}
+
+.contenedor-info .video-proyecto {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+.caluga-texto {
+    width: 500px;
+}
+
+.contenedor-info .video-proyecto {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.caluga-info h3,
+.caluga-info p {
+    text-align: center;
+}
+
+#centrar{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.borde-red{
+    border: 2px solid red;
+}
+
+@media (max-width: 900px) {
+
+    .contenedor-carta-catalogo,
+    .contenedor-inicio {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .caluga-carta-catalogo {
+        width: 90%;
+        max-width: 220px;
+    }
+
+    .contenedor-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .caluga-video,
+    .caluga-texto {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .contenedor-info .video-proyecto {
+        height: 260px;
+    }
+
+    .contenedor_carta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .caluga_carta,
+    .caluga_carta_info {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    
+}
+
+@media (max-width: 600px) {
+
+    #header {
+        flex-direction: column;
+        height: auto;
+        padding: 12px 16px;
+        gap: 10px;
+    }
+
+    .header-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .header-icons {
+        gap: 25px;
+    }
+
+    .contenedor-banner {
+        padding: 10px;
+    }
+
+    .caluga-banner {
+        width: 100%;
+        max-width: 380px;
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .info-banner h2 {
+        font-size: 20px;
+    }
+
+    .imagen-banner img {
+        width: 100%;
+        height: auto;
+    }
+
+    .video-proyecto {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .info-carta h3 {
+        font-size: 28px;
+    }
+
+    .info-carta p {
+        font-size: 16px;
+    }
+}

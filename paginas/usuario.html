@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>usuario</title>
+    <link rel="stylesheet" href="../style/estilos.css">
+    <link rel="stylesheet" href="../style/calugas.css">
+    
+</head>
+<body>  
+    <header id="header"></header>
+    <div class="contenedor_carta">
+        <div class="caluga_carta">
+            <div class="form-box login " id="caja-login">
+                <form id="form-login">
+                    <h1>Iniciar Sesión</h1>
+                    <div id="centrar">
+                        <input type="text" id="login-usuario" placeholder="Usuario" required>
+                        <input type="password" id="login-contraseña" placeholder="Contraseña" required>
+                        <button type="submit" class="btn">Ingresar</button>
+                    </div>
+                    <p>¿No tienes cuenta? <a href="#" id="ir-a-registro">Regístrate</a></p>
+                </form>
+            </div>
+            <div class="form-box register" id="caja-registro" style="display: none;">
+                <form id="form-registro">
+                    <h1>Crear cuenta</h1>
+                    <div id="centrar">
+                        <input type="text" id="reg-usuario" placeholder="Usuario" required>
+                        <input type="email" id="reg-correo" placeholder="Correo" required>
+                        <input type="password" id="reg-contraseña" placeholder="Contraseña" required>
+                    <button type="submit" class="btn">Registrarse</button>
+                    </div>
+                    <p>¿Ya tienes cuenta? <a href="#" id="ir-a-login">Iniciar Sesión</a></p>
+                </form>
+            </div>
+            <div class="form-box" id="caja-bienvenida" style="display: none;">
+                <h1 id="Texto-bienvenida"></h1>
+            </div>
+            <div class="form-box" id="caja-registradas" style="display: none;">
+                <h1 id="Texto-registro"></h1>
+            </div>
+
+        </div>
+    </div>
+    <footer id="footer"></footer>
+</body>
+<script src="../scripts/scriptlogin.js"></script>
+<script src="../scripts/scripts.js"></script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swamperTCG</title>
+    <link rel="stylesheet" href="style/estilos.css">
+    <link rel="stylesheet" href="style/calugas.css">
+</head>
+<body>
+    <header id="header"></header>
+
+        <div class="contenedor-banner">
+            <div class="caluga-banner">
+                <div class="info-banner">
+                    <h2>Compra forma segura y confiable</h2>
+                    <p>¡Tienda de cartas pokemon chilena!</p>
+                </div>
+                <div class="imagen-banner">
+                    <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2025/07/pokemon-tcg-pocket-secret-missions-wisdom-od-sea-and-sky-featured.jpg?q=49&fit=crop&w=825&dpr=2" alt="Cartas TCG">
+                </div>
+            </div>
+        </div>
+
+        <div id="catalogo" class="contenedor-carta-catalogo contenedor-inicio"></div>
+
+        <div class="contenedor-banner">
+            <video src="videos/logo.mp4" autoplay muted loop playsinline class="video-proyecto">
+            </video>
+        </div>
+
+    <footer id="footer"></footer>
+
+</body>
+<script src="scripts/scripts.js"></script>
+<script src="scripts/catalogo.js"></script>
+<script>
+    window.addEventListener("load", () => mostrarCatalogo(3));
+</script>
+</html>

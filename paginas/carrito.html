@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="../style/estilos.css">
+    <link rel="stylesheet" href="../style/calugas.css">
+    <link rel="stylesheet" href="../style/estiloCarrito.css">
+</head>
+<body>
+    <header id="header"></header>
+        <div class="contenedor_carta">
+            <div class="caja-carrito">
+                <div id="lista-carrito"></div>
+                <h2 id="total-carrito"></h2>
+            </div>
+            <button id="btn-vaciar-carrito">Vaciar carrito</button>
+        </div>
+    <footer id="footer"></footer>
+</body>
+<script src="../scripts/scripts.js"></script>
+<script src="../scripts/catalogo.js"></script>
+<script>
+    mostrarCarrito();
+        document.getElementById("btn-vaciar-carrito").addEventListener("click", function() {
+        guardarCarrito([]);
+        mostrarCarrito();
+    });
+    
+</script>
+</html>

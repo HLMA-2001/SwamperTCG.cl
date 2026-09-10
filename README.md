@@ -1,2 +1,2 @@
-# SwamperTCG.cl
-somos una tienda de cartas pokemon chilena esta es nuestra primera pagina
+# SwamperTCG
+Somos una tienda de cartas de pokemon chilena
