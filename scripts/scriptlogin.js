@@ -4,6 +4,8 @@ let usuarios = [
 
 ]
 
+const rutaBase = window.location.pathname.includes("/paginas/") ? "../" : "";
+
 
 function registros(e){
     e.preventDefault();
@@ -54,7 +56,7 @@ document.getElementById("form-registro").addEventListener("submit", function(e){
     /*    document.getElementById("caja-registro").style.display= "none";
         document.getElementById("caja-registradas").style.display= "block";
         document.getElementById("Texto-registro").innerHTML = "Usuario " + datos.usuario + " Registrado";
-        setTimeout(function (){window.location.href = "/index.html"}, 2000)
+        setTimeout(function (){window.location.href = rutaBase + "index.html"}, 2000)
     */
 
 document.getElementById("form-login").addEventListener("submit", function (e){
@@ -70,7 +72,7 @@ document.getElementById("form-login").addEventListener("submit", function (e){
         document.getElementById("caja-login").style.display= "none";
         document.getElementById("caja-bienvenida").style.display= "block"
         document.getElementById("Texto-bienvenida").innerHTML = "Bienvenido " + encontrado.usuario;
-        setTimeout(function (){window.location.href = "/index.html"}, 2000)
+        setTimeout(function (){window.location.href = rutaBase + "index.html"}, 2000)
     }else{
         alert("Usuario no registrado")
     }
