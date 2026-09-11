@@ -1,17 +1,27 @@
+let usuarios = [
+    {usuario: 'Alonso', correo: 'AlonsoFuentes@gmail.com', contraseña: 'Alonso123'}
+
+
+]
+
+
 function registros(e){
     e.preventDefault();
     document.getElementById("caja-login").style.display= "none";
     document.getElementById("caja-registro").style.display = "block";
 }
 
+
 function logins(e){
     e.preventDefault();
     document.getElementById("caja-registro").style.display = "none";
     document.getElementById("caja-login").style.display = "block";
+    
 }
 
 document.getElementById("ir-a-registro").addEventListener("click" , registros);
 document.getElementById("ir-a-login").addEventListener("click" , logins);
+
 
 function obtenerRegistros(){
     let usuario = obtenerString("reg-usuario", "Usuario", 3,20);
@@ -26,6 +36,8 @@ function obtenerRegistros(){
         correo: correo.value.trim(),
         contraseña: contraseña.value
     };
+
+
 }
 document.getElementById("form-registro").addEventListener("submit", function(e){
     e.preventDefault();
@@ -35,13 +47,38 @@ document.getElementById("form-registro").addEventListener("submit", function(e){
         return; 
     }
     console.log("Datos válidos:", datos);
-    alert("Registro válido (por ahora solo se valida, falta guardarlo)");
+    usuarios.push(datos)
+    alert("Usuario " + datos.usuario + " registrado")
 });
+
     /*    document.getElementById("caja-registro").style.display= "none";
         document.getElementById("caja-registradas").style.display= "block";
         document.getElementById("Texto-registro").innerHTML = "Usuario " + datos.usuario + " Registrado";
         setTimeout(function (){window.location.href = "/index.html"}, 2000)
     */
+
+document.getElementById("form-login").addEventListener("submit", function (e){
+    e.preventDefault();
+    let usuarioIngresado = document.getElementById("login-usuario").value.trim();
+    let contraseñaIngresada = document.getElementById("login-contraseña").value;
+
+    let encontrado = usuarios.find(function(u){
+    return u.usuario === usuarioIngresado && u.contraseña === contraseñaIngresada;
+    })
+
+    if (encontrado){
+        document.getElementById("caja-login").style.display= "none";
+        document.getElementById("caja-bienvenida").style.display= "block"
+        document.getElementById("Texto-bienvenida").innerHTML = "Bienvenido " + encontrado.usuario;
+        setTimeout(function (){window.location.href = "/index.html"}, 2000)
+    }else{
+        alert("Usuario no registrado")
+    }
+    
+    
+})
+
+
 
 function obtenerString(ids, variable, min, max){
     let apuntar = document.getElementById(ids);
